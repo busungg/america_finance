@@ -9,7 +9,7 @@ const axios = require('axios').default;
 router.get('/', function(req, res, next) {
     axios.get('https://stockrow.com/api/companies/AMZN/financials.xlsx?dimension=Q&section=Metrics&sort=desc',
     {
-        responseType: 'blob',
+        responseType: 'arraybuffer',
         headers: {
             'content-type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
         }
